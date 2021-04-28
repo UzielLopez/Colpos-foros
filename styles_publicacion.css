@@ -11,7 +11,7 @@ textarea {
     border-width: 2px;
 }
 
-#contenidoOP h6{
+h6{
     font-size: small;
     display: inline;
 }
@@ -30,14 +30,20 @@ textarea {
 li{
 
     margin-top: 30px;
+    margin-bottom: 0px;
     margin-left: 100px;
     list-style: none;
     border-style: solid;
     border-width: 1px;
+    
+
+
+
+}
+
+li p{
+
     padding: 5px;
-
-
-
 }
 
 
@@ -55,8 +61,8 @@ li{
 aside{
 
     width: 90px;
-    margin-left: -30px;
-    padding-left: 15px;
+    margin-left: -125px;
+    padding-left: 20px;
     float: left;
     word-wrap: break-word;
     background-color: lightgray;

@@ -1,0 +1,64 @@
+textarea {
+    resize: none;
+}
+
+#respuestas p{
+    word-wrap: break-word;
+}
+
+#contenidoOP{
+    border-style: solid;
+    border-width: 2px;
+}
+
+#contenidoOP h6{
+    font-size: small;
+    display: inline;
+}
+
+#contenidoOP p{
+
+    
+    word-wrap: break-word;
+    
+    padding: 5px;
+    margin-top: 0px;
+
+}
+
+
+li{
+
+    margin-top: 30px;
+    margin-left: 100px;
+    list-style: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+
+
+
+}
+
+
+.infoUsuario{
+
+    width: 90px;
+    display:inline-block;
+    border-style: solid;
+
+
+}
+
+
+
+aside{
+
+    width: 90px;
+    margin-left: -30px;
+    padding-left: 15px;
+    float: left;
+    word-wrap: break-word;
+    background-color: lightgray;
+
+}

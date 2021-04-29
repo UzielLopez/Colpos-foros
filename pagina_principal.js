@@ -18,7 +18,6 @@ function hacerPost(){
   var nuevaCategoria = $('#selectCategoria').val();
   var nuevoContenido = $('#selectContenido').val();
 
-  console.log(nuevaCategoria);
   try {
 
     if(nuevoTitulo === "" ) throw 'Por favor, coloca un título a la publicación';
@@ -58,11 +57,12 @@ function hacerPost(){
       var res_query = document.getElementById("resDePost");
       res_query.style.color = "#FFFFFF";
       res_query.style.display = "block";
-      setTimeout(function(data){
-        $('#resDePost').html("¡Tu publicación se realizó exitosamente!");
-        location.replace(`publicacion.html?idPub=${data.id}&idCat=${data.idCategoriaPublicacion}`);
-      }, 2000); 
+      $('#resDePost').html("¡Tu publicación se realizó exitosamente!");
+      setTimeout(function(){
+        location.replace(`publicacion.html?idPub=${data.publicacion.id}&idCat=${data.publicacion.idCategoriaPublicacion}`); 
+      }, 2000);
       
+
     },
     data: JSON.stringify(nuevoPost)
   });
@@ -129,7 +129,6 @@ function getCategories(){
     function(json){
 
       var arrCategorias = json.categorias;
-      console.log(arrCategorias);
 
       var selector = document.getElementById("categorias");
       var selectorNewPost = document.getElementById("selectCategoria");

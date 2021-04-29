@@ -3,17 +3,19 @@
   <head>
     <title></title>
     <link rel="stylesheet" href="styles_publicacion.css">
+    <script async src="pagina_publicaciones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="setUp()">
     <div id="cabezaPublicacion">
       
-      <label>Categoría</label>
-      <p style="display: inline;">--></p>
-      <label class="tituloPublicacion" >Titulo</label>
+      <label id="cabezaCat">Categoría</label>
+      <p style="display: inline;">&#8594;</p>
+      <label id="cabezaTit">Titulo</label>
 
     </div>
 
-    <h2 class="tituloPublicacion"> Mis gallians dieron a luz por cesaria</h2>
+    <h2 id="tituloPublicacion"></h2>
 
     <div id="postOP">
 
@@ -22,9 +24,9 @@
       <div id="contenidoOP">
 
         <h6>Publicado el</h6>
-        <h6>00/00/0000</h6>
+        <h6></h6>
 
-        <p>Una vez estba con mis gallinas en el cerro y ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p></p>
 
 
       </div>
@@ -32,7 +34,8 @@
 
     </div>
 
-    <button id="crearRespuesta">Responder</button>
+    <button id="crearRespuesta" onclick="mostrarVistaCrearRespuesta()">Responder</button>
+
     <div id="creacionRespuesta">
 
       <label>Usuario</label>
@@ -41,52 +44,19 @@
       <label>Contenido</label>
       <textarea type="tex" id="contenidoRespuesta" rows="10" cols="50"></textarea>
       <br>
-      <button name="button">Publicar respuesta</button>
+      <button onclick="hacerRespuesta()" name="button">Publicar respuesta</button>
 
     </div>
+
+    <p id="resDePost"></p>
 
     
     <h2>Respuestas</h2>
     
     <div id="respuestas">
+
       
-      
-      <ol>
-
-        
-        <!--Cada li element debe tener:
-        aside: esta la info del usuario que publica la respuesta
-        h6: ahí vamos a poner la fecha de publicación
-        p: contenido de la respuesta-->
-        
-        <li>
-          <aside><p>Uziel</p> <p>Cultivo fresas</p></aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
-
-
-
-        
-        <li>
-          <aside>  <p>Uziel</p> <p>Cultivo fresas</p> </aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
-
-        <li>
-          
-          <aside>  <p>Uziel</p> <p>Cultivo fresas</p> </aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
-
+      <ol id="lista">
       </ol>
     </div>
   </body>

@@ -3,11 +3,13 @@
   <head>
     <title>Foros</title>
     <link rel="stylesheet" href="styles_index.css">
+    <script async src="pagina_principal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   </head>
   
-  <body>
+  <body onload="setUp()">
     <h1>Bienvenido al foro de COLPOS</h1>
-    <button>Crear post</button>
+    <button onclick="mostrarVistaCrearPost()">Crear post</button>
 
     <div id="creacionPost">
       <label>Titulo</label>
@@ -22,21 +24,19 @@
       <label>Contenido</label>
       <textarea type="tex" id="selectContenido" rows="10" cols="50"></textarea>
 
-      <button  name="button">Publicar post</button>
+      <button onclick="hacerPost()" >Publicar post</button>
     </div>
 
+    <p id="resDePost"></p>
+
     <label>Filtra por categoría</label>
-    <select id="categorias"> </select>
+    <select id="categorias" onchange="loadPublicaciones()"> 
+      <option value="0" selected disabled hidden>Escoger categoría</option>
+
+    </select>
 
     <div >
       <ol id="lista">
-        <li>
-          <a href="publicacion.html"> Post 1 </a>
-          <br>
-          <span>Uzi</span>
-        </li>
-        <li>dani</li>
-        <li>fer</li>
       </ol>
     </div>
 

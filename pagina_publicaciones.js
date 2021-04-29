@@ -28,6 +28,18 @@ function hacerRespuesta(){
   var nuevoContenido = $('#contenidoRespuesta').val();
   var nuevoIdPub = getIdPub();
 
+  try {
+
+    if(nuevoContenido === "" ) throw 'No puedes publicar una respuesta sin contenido';
+    if(nuevoUsuario === "" ) throw 'Se requiere un usuario para poder publicar una respuesta';
+    if(nuevoIdPub === 0 ) throw 'Esto no debería pasar nunca';
+
+  } catch (error) {
+    document.getElementById("resDePost").style.display = "block";
+    document.getElementById("resDePost").innerHTML = error;
+    return;
+  }
+
   var hoy = new Date();
   var dia = String(hoy.getDate()).padStart(2, '0');
   var mes = String(hoy.getMonth() + 1).padStart(2, '0'); //Enero es 0, por alguna razón
@@ -50,6 +62,9 @@ function hacerRespuesta(){
     dataType: 'json',
     contentType: 'application/json',
     success: function(data){
+      var res_query = document.getElementById("resDePost");
+      res_query.style.color = "#FFFFFF";
+      res_query.style.display = "block";
       $('#resDePost').html("¡Tu respuesta se publicó exitosamente!");
       if(data){
         setTimeout(function(){
@@ -84,9 +99,8 @@ function loadRespuestas(idPublicacion){
           
           ol.innerHTML += `
                         <li>
-                        <aside><p>${sanitizeHTML(res.usuario)}</p></aside>
-                        <h6>Publicado el</h6>
-                        <h6>${fecha}</h6>
+                        <aside>${sanitizeHTML(res.usuario)}</aside>
+                        <h6>Publicado el ${fecha}</h6>
                         <p>${sanitizeHTML(res.contenido)}</p>
                         </li>
           
@@ -109,8 +123,10 @@ function findElement(arr, propName, propValue) {
 
 function setUp(){
 
+
     var creacionPost = document.getElementById("creacionRespuesta");
     creacionPost.style.display = "none";
+    document.getElementById("resDePost").style.display = "none";
     
 
     var url_string = window.location.href;
@@ -131,13 +147,13 @@ function setUp(){
         var opContenido = document.getElementById("contenidoOP");
         opContenido.innerHTML = `
         
-        <h6>Publicado el</h6>
-        <h6>${fechaPub}</h6>
-
+        <h6>Publicado el ${fechaPub}</h6>
+        <hr>
         <p>${sanitizeHTML(pubActual.contenido)}</p>
         
   
-        `
+        `;
+        document.title = pubActual.nombre;
         document.getElementById("usuarioOP").innerHTML = sanitizeHTML(pubActual.usuario);
         document.getElementById("tituloPublicacion").innerHTML = sanitizeHTML(pubActual.nombre);
         document.getElementById("cabezaTit").innerHTML = sanitizeHTML(pubActual.nombre);

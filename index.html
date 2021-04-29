@@ -18,8 +18,8 @@
 
     <br>
 
-    <div class="btn-1" onclick="mostrarVistaCrearPost()">
-        <button id="">Crear post</button>
+    <div class="btn-1">
+        <button onclick="mostrarVistaCrearPost()" id="">Crear post</button>
     </div>
 
     <div id="creacionPost">
@@ -37,7 +37,7 @@
         <label class="custom-selector">
         <!-- Categoria -->
             <select id="selectCategoria">
-                <option value="" selected disabled hidden>Categoría</option>
+                <option value="0" selected disabled hidden>Categoría</option>
             </select>
         </label>
 
@@ -57,7 +57,7 @@
 
         <label class="custom-selector2">
           <span>Filtra por categoría</span>
-          <select id="categorias">
+          <select id="categorias" onchange="loadPublicaciones()">
             <option value="0" selected disabled hidden>Escoger categoría</option>
           </select>
         </label>

@@ -86,9 +86,10 @@ function loadPublicaciones(){
         var usuario = sanitizeHTML(pub.usuario);
         ol.innerHTML += `
                           <li>
-                          <a href="publicacion.html?idPub=${pub.id}&idCat=${idCategoria}"> <span class="sp1D">${nombre}</span></a>
+                          <a href="publicacion.html?idPub=${pub.id}&idCat=${idCategoria}"> 
+                          </a>
                           <img src="img/icons8-discussion-forum-80.png">
-                          <br>
+                          <span class="sp1D"> ${nombre} </span>
                           <span class="sp2D">${usuario}</span>
                           </li>`;
       });

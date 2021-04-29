@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Foros</title>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="styles_index.css"> -->
+    <link rel="stylesheet" href="styles_index.css">
+</head>
+
+<body>
+    <div class="headerD">
+        <img src="img/colpos.png">
+        <h1>Foro de discusión</h1>
+    </div>
+
+    <br>
+    
+    <div class="btn-1">
+        <button id="">Crear post</button>
+    </div>
+
+    <div id="creacionPost">
+
+        <label class="custom-field">
+          <input type="text" id="selectTitulo" placeholder="Título de publicación">
+          <!-- <span class="placeholder">Titulo</span> -->
+        </label>
+
+        <label class="custom-field">
+          <input type="text" id="selectUsuario" placeholder="Usuario">
+          <!-- <span class="placeholder">Usuario</span> -->
+        </label>
+
+        <label class="custom-selector">
+        <!-- Categoria -->
+            <select id="selectCategoria">
+                <option value="" selected disabled hidden>Categoría</option>
+            </select>
+        </label>
+
+        <label class="custom-field2">
+            <textarea type="tex" id="selectContenido" rows="10" cols="50" placeholder="Contenido de publicación"></textarea>
+        <!-- <span class="placeholder2">Contenido</span> -->
+        </label>
+
+        <div class="btn-2">
+            <button name="button">Publicar post</button>
+        </div>
+    </div>
+
+    <div class="postsD">
+
+        <label class="custom-selector2">
+          <span>Filtra por categoría</span>
+          <select id="categorias">
+            <option value="" selected disabled hidden>Animales</option>
+          </select>
+        </label>
+    
+        <div>
+            <ol id="lista">
+                <li>
+                    <a href="publicacion.html"></a>
+                    <img src="img/icons8-discussion-forum-80.png">
+                    <span class="sp1D">TitlePost</span>
+                    <span class="sp2D">Username</span>
+                </li>
+                <li>
+                    <a href="publicacion.html"></a>
+                    <img src="img/icons8-discussion-forum-80.png">
+                    <span class="sp1D">TitlePost</span>
+                    <span class="sp2D">Username</span>
+                </li>
+                <li>
+                    <a href="publicacion.html"></a>
+                    <img src="img/icons8-discussion-forum-80.png">
+                    <span class="sp1D">TitlePost</span>
+                    <span class="sp2D">Username</span>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

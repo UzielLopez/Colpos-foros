@@ -5,18 +5,20 @@
     <title>Foros</title>
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" href="styles_index.css"> -->
+    <script async src="pagina_principal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="styles_index.css">
 </head>
 
-<body>
+<body onload="setUp()">
     <div class="headerD">
         <img src="img/colpos.png">
         <h1>Foro de discusión</h1>
     </div>
 
     <br>
-    
-    <div class="btn-1">
+
+    <div class="btn-1" onclick="mostrarVistaCrearPost()">
         <button id="">Crear post</button>
     </div>
 
@@ -45,39 +47,23 @@
         </label>
 
         <div class="btn-2">
-            <button name="button">Publicar post</button>
+            <button name="button" onclick="hacerPost()">Publicar post</button>
         </div>
     </div>
+
+    <p id="resDePost"></p>
 
     <div class="postsD">
 
         <label class="custom-selector2">
           <span>Filtra por categoría</span>
           <select id="categorias">
-            <option value="" selected disabled hidden>Animales</option>
+            <option value="0" selected disabled hidden>Escoger categoría</option>
           </select>
         </label>
-    
+
         <div>
             <ol id="lista">
-                <li>
-                    <a href="publicacion.html"></a>
-                    <img src="img/icons8-discussion-forum-80.png">
-                    <span class="sp1D">TitlePost</span>
-                    <span class="sp2D">Username</span>
-                </li>
-                <li>
-                    <a href="publicacion.html"></a>
-                    <img src="img/icons8-discussion-forum-80.png">
-                    <span class="sp1D">TitlePost</span>
-                    <span class="sp2D">Username</span>
-                </li>
-                <li>
-                    <a href="publicacion.html"></a>
-                    <img src="img/icons8-discussion-forum-80.png">
-                    <span class="sp1D">TitlePost</span>
-                    <span class="sp2D">Username</span>
-                </li>
             </ol>
         </div>
 

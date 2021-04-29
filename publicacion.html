@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title></title>
     <link rel="stylesheet" href="styles_publicacion.css">
-  </head>
-  <body>
-    <div id="cabezaPublicacion">
-      
-      <label>Categoría</label>
-      <p style="display: inline;">--></p>
-      <label class="tituloPublicacion" >Titulo</label>
+</head>
+
+<body>
+    <div class="cabezaPublicacion" id="cabezaPublicacion">
+
+        <label>Categoría</label>
+        <p style="display: inline;">--></p>
+        <label class="tituloPublicacion">Titulo</label>
 
     </div>
 
@@ -17,77 +19,95 @@
 
     <div id="postOP">
 
-      <h3 id="usuarioOP">Usuario</h3>
+        <h3 id="usuarioOP">Usuario</h3>
 
-      <div id="contenidoOP">
+        <div class="contenidoOP" id="contenidoOP">
 
-        <h6>Publicado el</h6>
-        <h6>00/00/0000</h6>
+            <h6>Publicado el</h6>
+            <h6>00/00/0000</h6>
 
-        <p>Una vez estba con mis gallinas en el cerro y ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+            <p>Una vez estba con mis gallinas en el cerro y dddddddddddd dddddddddddddddddd ddddddddddddddddddddddddd dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
 
 
-      </div>
+        </div>
 
+        <br>
 
     </div>
 
-    <button id="crearRespuesta">Responder</button>
+    <button class="btn-1" id="crearRespuesta">Responder</button>
     <div id="creacionRespuesta">
 
-      <label>Usuario</label>
-      <input type="text" id="selectUsuario"></input>
-      <br>
-      <label>Contenido</label>
-      <textarea type="tex" id="contenidoRespuesta" rows="10" cols="50"></textarea>
-      <br>
-      <button name="button">Publicar respuesta</button>
+        <br>
+        <label class="custom-field">
+        <input type="text" id="selectUsuario"></input>
+        <span class="placeholder">Usuario</span>
+        </label>
+        <br>
+        <br>
+        <label class="custom-field2">
+        <textarea type="tex" id="contenidoRespuesta" rows="10" cols="50"></textarea>
+        <span class="placeholder2">Contenido</span>
+        </label>
+        <br>
+        <br>
+        <button class="btn-1" name="button">Publicar respuesta</button>
 
     </div>
 
-    
-    <h2>Respuestas</h2>
-    
-    <div id="respuestas">
-      
-      
-      <ol>
 
-        
-        <!--Cada li element debe tener:
+    <h2>Respuestas</h2>
+
+    <div id="respuestas">
+
+
+        <ol id="lista">
+
+
+            <!--Cada li element debe tener:
         aside: esta la info del usuario que publica la respuesta
         h6: ahí vamos a poner la fecha de publicación
         p: contenido de la respuesta-->
-        
-        <li>
-          <aside><p>Uziel</p> <p>Cultivo fresas</p></aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
+
+            <li>
+                <aside>
+                    <p>Uziel</p>
+                    <p>Cultivo fresas</p>
+                </aside>
+                <h6 class="responses_date">Publicado el</h6>
+                <h6 class="responses_date">00/00/0000</h6>
+                <p class="responses">Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm </p>
+            </li>
 
 
 
-        
-        <li>
-          <aside>  <p>Uziel</p> <p>Cultivo fresas</p> </aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
 
-        <li>
-          
-          <aside>  <p>Uziel</p> <p>Cultivo fresas</p> </aside>
-          <h6>Publicado el</h6>
-          <h6>00/00/0000</h6>
-          <p>Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-            mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  </p>
-        </li>
+            <li>
+                <aside>
+                    <p>Uziel</p>
+                    <p>Cultivo fresas</p>
+                </aside>
+                <h6 class="responses_date">Publicado el</h6>
+                <h6 class="responses_date">00/00/0000</h6>
+                <p class="responses">Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm </p>
+            </li>
 
-      </ol>
+            <li>
+
+                <aside>
+                    <p>Uziel</p>
+                    <p>Cultivo fresas</p>
+                </aside>
+                <h6 class="responses_date">Publicado el</h6>
+                <h6 class="responses_date">00/00/0000</h6>
+                <p class="responses">Creo que no le sabes a las gallinas allalaaaaaaaaaaaaalallllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm </p>
+            </li>
+
+        </ol>
     </div>
-  </body>
+</body>
+
 </html>

@@ -18,6 +18,20 @@ function hacerPost(){
   var nuevaCategoria = $('#selectCategoria').val();
   var nuevoContenido = $('#selectContenido').val();
 
+  console.log(nuevaCategoria);
+  try {
+
+    if(nuevoTitulo === "" ) throw 'Por favor, coloca un título a la publicación';
+    if(nuevoUsuario === "" ) throw 'Se requiere un usuario para poder publicar';
+    if(nuevaCategoria === null ) throw 'Por favor, selecciona una categoría';
+
+  } catch (error) {
+    document.getElementById("resDePost").style.display = "block";
+    document.getElementById("resDePost").innerHTML = error;
+    return;
+  }
+
+
   var hoy = new Date();
   var dia = String(hoy.getDate()).padStart(2, '0');
   var mes = String(hoy.getMonth() + 1).padStart(2, '0'); //Enero es 0, por alguna razón
@@ -41,9 +55,14 @@ function hacerPost(){
     dataType: 'json',
     contentType: 'application/json',
     success: function(data){
-      document.getElementById("resDePost").style.display = "block";
-      $('#resDePost').html("¡Tu publicación se realizó exitosamente!");
-      location.replace(`publicacion.html?idPub=${data.id}&idCat=${data.idCategoriaPublicacion}`);
+      var res_query = document.getElementById("resDePost");
+      res_query.style.color = "#FFFFFF";
+      res_query.style.display = "block";
+      setTimeout(function(data){
+        $('#resDePost').html("¡Tu publicación se realizó exitosamente!");
+        location.replace(`publicacion.html?idPub=${data.id}&idCat=${data.idCategoriaPublicacion}`);
+      }, 2000); 
+      
     },
     data: JSON.stringify(nuevoPost)
   });
@@ -72,7 +91,8 @@ function loadPublicaciones(){
   
   var ol = document.getElementById("lista");
   
-  var idCategoria = +document.getElementById("categorias").value;
+  var idCategoria = document.getElementById("categorias").value;
+  if(idCategoria === null) {return;}
   var url = "http://35.223.20.167:8087/api/publicacion/" + idCategoria.toString();
 
   ol.innerHTML = "";
@@ -109,6 +129,7 @@ function getCategories(){
     function(json){
 
       var arrCategorias = json.categorias;
+      console.log(arrCategorias);
 
       var selector = document.getElementById("categorias");
       var selectorNewPost = document.getElementById("selectCategoria");

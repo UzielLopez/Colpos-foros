@@ -58,6 +58,14 @@ body {
     width: 500px;
 }
 
+#resDePost{
+
+    color: #D33F49;
+    font-weight: bold;
+    text-align: center;
+
+}
+
 .custom-field, .custom-selector, .custom-field2 {
     text-align: center;
     display: block;

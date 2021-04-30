@@ -37,6 +37,7 @@ body {
     background: #24344D;
     border-radius: 9px;
     word-wrap: break-word;
+    overflow-wrap: break-word;
     margin-top: 10px;
 }
 
@@ -84,8 +85,13 @@ body {
 
 #postOP p {
     display: block;
+    white-space: pre-wrap;
     margin: 10px 25px;
     font-size: 1.2em;
+}
+
+#creacionRespuesta{
+    display: none;
 }
 
 #crearRespuesta, #creacionRespuesta button {
@@ -121,6 +127,7 @@ body {
 }
 
 #contenidoRespuesta {
+    
     margin-top: 10px;
     width: 400px;
     background: none;
@@ -188,6 +195,8 @@ body {
 }
 
 #lista li p{
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
     padding: 5px;
     margin: 30px 10px 5px 10px;
 }

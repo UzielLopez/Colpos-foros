@@ -52,6 +52,7 @@ body {
 }
 
 #creacionPost {
+    display: none;
     margin: auto;
     background-color: #24344D;
     border-radius: 9px;

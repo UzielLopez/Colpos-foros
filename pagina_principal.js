@@ -2,11 +2,11 @@ function mostrarVistaCrearPost(){
 
   var creacionPost = document.getElementById("creacionPost");
 
-  if (creacionPost.style.display === "block") {
-      creacionPost.style.display = "none";
+  if (creacionPost.style.display === "none") {
+      creacionPost.style.display = "block";
     }
   else {
-      creacionPost.style.display = "block";
+      creacionPost.style.display = "none";
     }
 
 }

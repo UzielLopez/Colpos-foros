@@ -2,27 +2,61 @@
 <html>
   <head>
     <title></title>
+    <link rel="stylesheet" href="styles_publicacion.css">
+    <script async src="pagina_publicaciones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="setUp()">
+    <div id="cabezaPublicacion">
+      
+      <label id="cabezaCat">Categoría</label>
+      <p style="display: inline;">&#8594;</p>
+      <label id="cabezaTit">Titulo</label>
+
+    </div>
+
+    <h2 id="tituloPublicacion"></h2>
+
     <div id="postOP">
-      <label>Titulo</label>
+
+      <h3 id="usuarioOP">Usuario</h3>
+
+      <div id="contenidoOP">
+
+        <h6>Publicado el</h6>
+        <h6></h6>
+
+        <p></p>
+
+
+      </div>
+
+
+    </div>
+
+    <button id="crearRespuesta" onclick="mostrarVistaCrearRespuesta()">Responder</button>
+
+    <div id="creacionRespuesta">
+
       <label>Usuario</label>
-      <label>Categoria</label>
+      <input type="text" id="selectUsuario"></input>
+      <br>
       <label>Contenido</label>
+      <textarea type="tex" id="contenidoRespuesta" rows="10" cols="50"></textarea>
+      <br>
+      <button onclick="hacerRespuesta()" name="button">Publicar respuesta</button>
+
     </div>
 
-    <button id="crearRespuesta">Responder</button>
+    <p id="resDePost"></p>
 
-    <div id="escribirRespuesta">
-      <textarea type="tex" id="selectContenido" rows="10" cols="50"></textarea>
-    </div>
-
+    
+    <h2>Respuestas</h2>
+    
     <div id="respuestas">
-      <ol>
-        <li>
-          <span>Uzi</span>
-          <p>eoufhoehfohouhfouhefou</p>
-        </li>
+
+      
+      <ol id="lista">
       </ol>
     </div>
   </body>

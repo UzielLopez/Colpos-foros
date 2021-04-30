@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    margin: 0;
+    background-color: #131C29;
+    color: white;
+}
+
+.headerD {
+    background-color: #24344D;
+    color: #B3BDCC;
+    padding: 20px;
+}
+
+.headerD img {
+    position: absolute;
+    width: 300px;
+    mix-blend-mode: soft-light;
+    top: 8px;
+}
+
+.headerD h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+}
+
+.btn-1 {
+    text-align: center;
+}
+
+.btn-1 button, .btn-2 button {
+    background-color: #9BC7FF;
+    color: #131C29;
+    width: 223px;
+    height: 50px;
+    font-size: 1.7em;
+    border: none;
+    border-radius: 4px;
+    transition: ease-out 0.7s;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.btn-1 button:hover, .btn-2 button:hover {
+    box-shadow: inset 300px 0 0 0 #33ffa0;
+    cursor: pointer;
+}
+
+#creacionPost {
+    margin: auto;
+    background-color: #24344D;
+    border-radius: 9px;
+    width: 500px;
+}
+
+#resDePost{
+
+    color: #D33F49;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.custom-field, .custom-selector, .custom-field2 {
+    text-align: center;
+    display: block;
+}
+
+.custom-field input {
+    margin-top: 15px;
+    width: 400px;
+    background: none;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 10px;
+    color: white;
+    transition: 0.25s;
+}
+
+.custom-field input:focus {
+    color: white;
+    background-color: #30445a;
+}
+
+.custom-selector select, .custom-selector2 select {
+    margin-top: 10px;
+    color: white;
+    font-size: 1em;
+    background: black;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 200px;
+    text-align-last: center;
+}
+
+.custom-selector select:hover, .custom-selector2 select:hover {
+    cursor: pointer;
+}
+
+.custom-field2 textarea {
+    margin-top: 10px;
+    width: 400px;
+    background: none;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 10px;
+    color: white;
+    transition: 0.25s;
+}
+
+.custom-field2 textarea:focus {
+    color: white;
+    background-color: #30445a;
+}
+
+.btn-2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-2 button {
+    background-color: #4194FF;
+    font-size: 1.4em;
+    width: 180px;
+    height: 40px;
+}
+
+.postsD {
+    margin: 10px 100px;
+}
+
+.postsD span {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.postsD select {
+    margin-left: 10px;
+    width: auto;
+}
+
+.postsD ol {
+    padding: 0;
+}
+
+.postsD ol li {
+    list-style: none;
+    background-color: #24344D;
+    border: none;
+    border-width: 1px;
+    border-radius: 9px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    height: 97px;
+}
+
+.postsD ol li a {
+    margin: 0px;
+    display: block;
+    width: 90%;
+    height: 97px;
+    position: absolute;
+}
+
+.postsD ol li img {
+    position: absolute;
+    background: url(icons8-discussion-forum-80.png), #B3BDCC;
+    border-radius: 15px;
+    margin: 8px 15px;
+}
+
+.postsD ol li span {
+    display: block;
+    margin-left: 125px;
+}
+
+.postsD ol li .sp1D {
+    
+    margin-top: 15px;
+    font-size: 1.7em;
+}
+
+.postsD ol li .sp2D {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.3em;
+}

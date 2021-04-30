@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles_publicacion.css">
+    <script async src="pagina_publicaciones.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body onload="setUp()">
+    <div class="headerD">
+      <img src="img/colpos.png">
+      <h1>Foro de discusión</h1>
+    </div>
+
+    <section class="allD">
+      <div id="cabezaPublicacion">
+        
+        <label id="cabezaCat"></label>
+        <p style="display: inline;">&#8594;</p>
+        <label id="cabezaTit"></label>
+  
+      </div>
+  
+      <div id="postOP">
+        <img src="img/icons8-discussion-forum-80.png">
+        <h2 id="tituloPublicacion"></h2>
+  
+        <h3 id="usuarioOP"></h3>
+  
+        <div id="contenidoOP">
+  
+          <h6></h6>
+          <hr>
+          <p></p>
+  
+        </div>
+  
+      </div>
+  
+      <button id="crearRespuesta" onclick="mostrarVistaCrearRespuesta()">Responder</button>
+  
+      <div id="creacionRespuesta">
+  
+        <input type="text" id="selectUsuario" placeholder="Usuario"></input>
+        <br>
+        <textarea type="tex" id="contenidoRespuesta" rows="10" cols="50" placeholder="Contenido de respuesta"></textarea>
+        <br>
+        <button onclick="hacerRespuesta()" name="button">Publicar respuesta</button>
+  
+      </div>
+  
+      <p id="resDePost"></p>
+  
+      
+      <h2 class="titleR">Respuestas</h2>
+      
+      <div id="respuestas">
+  
+        
+        <ol id="lista">
+        </ol>
+      </div>
+    </section>
+  </body>
+</html>
